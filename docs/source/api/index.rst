@@ -1,30 +1,30 @@
-Pyrender API Documentation
+Pyribbit API Documentation
 ==========================
 
 Constants
 ---------
-.. automodapi:: pyrender.constants
+.. automodapi:: pyribbit.constants
    :no-inheritance-diagram:
    :no-main-docstr:
    :no-heading:
 
 Cameras
 -------
-.. automodapi:: pyrender.camera
+.. automodapi:: pyribbit.camera
    :no-inheritance-diagram:
    :no-main-docstr:
    :no-heading:
 
 Lighting
 --------
-.. automodapi:: pyrender.light
+.. automodapi:: pyribbit.light
    :no-inheritance-diagram:
    :no-main-docstr:
    :no-heading:
 
 Objects
 -------
-.. automodapi:: pyrender
+.. automodapi:: pyribbit
    :no-inheritance-diagram:
    :no-main-docstr:
    :no-heading:
@@ -34,7 +34,7 @@ Objects
 
 Scenes
 ------
-.. automodapi:: pyrender
+.. automodapi:: pyribbit
    :no-inheritance-diagram:
    :no-main-docstr:
    :no-heading:
@@ -45,7 +45,7 @@ Scenes
 
 On-Screen Viewer
 ----------------
-.. automodapi:: pyrender.viewer
+.. automodapi:: pyribbit.viewer
    :no-inheritance-diagram:
    :no-inherited-members:
    :no-main-docstr:
@@ -53,7 +53,7 @@ On-Screen Viewer
 
 Off-Screen Rendering
 --------------------
-.. automodapi:: pyrender.offscreen
+.. automodapi:: pyribbit.offscreen
    :no-inheritance-diagram:
    :no-main-docstr:
    :no-heading:

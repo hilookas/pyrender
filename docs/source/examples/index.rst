@@ -3,7 +3,7 @@
 User Guide
 ==========
 
-This section contains guides on how to use Pyrender to quickly visualize
+This section contains guides on how to use Pyribbit to quickly visualize
 your 3D data, including a quickstart guide and more detailed descriptions
 of each part of the rendering pipeline.
 

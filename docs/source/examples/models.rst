@@ -3,7 +3,7 @@
 Loading and Configuring Models
 ==============================
 The first step to any rendering application is loading your models.
-Pyrender implements the GLTF 2.0 specification, which means that all
+Pyribbit implements the GLTF 2.0 specification, which means that all
 models are composed of a hierarchy of objects.
 
 At the top level, we have a :class:`.Mesh`. The :class:`.Mesh` is
@@ -26,25 +26,25 @@ Creating Triangular Meshes
 
 Simple Construction
 ~~~~~~~~~~~~~~~~~~~
-Pyrender allows you to create a :class:`.Mesh` containing a
+Pyribbit allows you to create a :class:`.Mesh` containing a
 triangular mesh model directly from a :class:`~trimesh.base.Trimesh` object
 using the :meth:`.Mesh.from_trimesh` static method.
 
 >>> import trimesh
->>> import pyrender
+>>> import pyribbit
 >>> import numpy as np
 >>> tm = trimesh.load('examples/models/fuze.obj')
->>> m = pyrender.Mesh.from_trimesh(tm)
+>>> m = pyribbit.Mesh.from_trimesh(tm)
 >>> m.primitives
-[<pyrender.primitive.Primitive at 0x7fbb0af60e50>]
+[<pyribbit.primitive.Primitive at 0x7fbb0af60e50>]
 
 You can also create a single :class:`.Mesh` from a list of
 :class:`~trimesh.base.Trimesh` objects:
 
 >>> tms = [trimesh.creation.icosahedron(), trimesh.creation.cylinder()]
->>> m = pyrender.Mesh.from_trimesh(tms)
-[<pyrender.primitive.Primitive at 0x7fbb0c2b74d0>,
- <pyrender.primitive.Primitive at 0x7fbb0c2b7550>]
+>>> m = pyribbit.Mesh.from_trimesh(tms)
+[<pyribbit.primitive.Primitive at 0x7fbb0c2b74d0>,
+ <pyribbit.primitive.Primitive at 0x7fbb0c2b7550>]
 
 Vertex Smoothing
 ~~~~~~~~~~~~~~~~
@@ -54,7 +54,7 @@ If you want to render the mesh without interpolating face normals, which can
 be useful for meshes that are supposed to be angular (e.g. a cube), you
 can specify ``smooth=False``.
 
->>> m = pyrender.Mesh.from_trimesh(tm, smooth=False)
+>>> m = pyribbit.Mesh.from_trimesh(tm, smooth=False)
 
 Per-Face or Per-Vertex Coloration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +64,7 @@ per-vertex colors:
 
 >>> tm.visual.vertex_colors = np.random.uniform(size=tm.vertices.shape)
 >>> tm.visual.face_colors = np.random.uniform(size=tm.faces.shape)
->>> m = pyrender.Mesh.from_trimesh(tm)
+>>> m = pyribbit.Mesh.from_trimesh(tm)
 
 Instancing
 ~~~~~~~~~~
@@ -92,14 +92,14 @@ array([[[1. , 0. , 0. , 0. ],
         [0. , 0. , 1. , 0. ],
         [0. , 0. , 0. , 1. ]]])
 
->>> m = pyrender.Mesh.from_trimesh(tm, poses=tfs)
+>>> m = pyribbit.Mesh.from_trimesh(tm, poses=tfs)
 
 Custom Materials
 ~~~~~~~~~~~~~~~~
 
 You can also specify a custom material for any triangular mesh you create
 in the ``material`` parameter of :meth:`.Mesh.from_trimesh`.
-The main material supported by Pyrender is the
+The main material supported by Pyribbit is the
 :class:`.MetallicRoughnessMaterial`.
 The metallic-roughness model supports rendering highly-realistic objects across
 a wide gamut of materials.
@@ -115,7 +115,7 @@ Creating Point Clouds
 
 Point Sprites
 ~~~~~~~~~~~~~
-Pyrender also allows you to create a :class:`.Mesh` containing a
+Pyribbit also allows you to create a :class:`.Mesh` containing a
 point cloud directly from :class:`numpy.ndarray` instances
 using the :meth:`.Mesh.from_points` static method.
 
@@ -123,7 +123,7 @@ Simply provide a list of points and optional per-point colors and normals.
 
 >>> pts = tm.vertices.copy()
 >>> colors = np.random.uniform(size=pts.shape)
->>> m = pyrender.Mesh.from_points(pts, colors=colors)
+>>> m = pyribbit.Mesh.from_points(pts, colors=colors)
 
 Point clouds created in this way will be rendered as square point sprites.
 
@@ -138,6 +138,6 @@ spheres, you can render it by instancing a spherical trimesh:
 >>> sm.visual.vertex_colors = [1.0, 0.0, 0.0]
 >>> tfs = np.tile(np.eye(4), (len(pts), 1, 1))
 >>> tfs[:,:3,3] = pts
->>> m = pyrender.Mesh.from_trimesh(sm, poses=tfs)
+>>> m = pyribbit.Mesh.from_trimesh(sm, poses=tfs)
 
 .. image:: /_static/points2.png

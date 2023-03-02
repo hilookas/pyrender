@@ -13,7 +13,7 @@ Choosing a Backend
 ------------------
 
 Once you have a scene set up with its geometry, cameras, and lights,
-you can render it using the :class:`.OffscreenRenderer`. Pyrender supports
+you can render it using the :class:`.OffscreenRenderer`. Pyribbit supports
 three backends for offscreen rendering:
 
 - Pyglet, the same engine that runs the viewer. This requires an active
@@ -23,7 +23,7 @@ three backends for offscreen rendering:
 - EGL, which allows for GPU-accelerated rendering without a display manager.
 
 If you want to use OSMesa or EGL, you need to set the ``PYOPENGL_PLATFORM``
-environment variable before importing pyrender or any other OpenGL library.
+environment variable before importing pyribbit or any other OpenGL library.
 You can do this at the command line:
 
 .. code-block:: bash
@@ -47,7 +47,7 @@ Once you've set your environment variable appropriately, create your scene and
 then configure the :class:`.OffscreenRenderer` object with a window width,
 a window height, and a size for point-cloud points:
 
->>> r = pyrender.OffscreenRenderer(viewport_width=640,
+>>> r = pyribbit.OffscreenRenderer(viewport_width=640,
 ...                                viewport_height=480,
 ...                                point_size=1.0)
 

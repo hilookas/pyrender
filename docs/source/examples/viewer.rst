@@ -5,17 +5,17 @@ Live Scene Viewer
 
 Standard Usage
 --------------
-In addition to the offscreen renderer, Pyrender comes with a live scene viewer.
+In addition to the offscreen renderer, Pyribbit comes with a live scene viewer.
 In its standard invocation, calling the :class:`.Viewer`'s constructor will
 immediately pop a viewing window that you can navigate around in.
 
->>> pyrender.Viewer(scene)
+>>> pyribbit.Viewer(scene)
 
 By default, the viewer uses your scene's lighting. If you'd like to start with
 some additional lighting that moves around with the camera, you can specify that
 with:
 
->>> pyrender.Viewer(scene, use_raymond_lighting=True)
+>>> pyribbit.Viewer(scene, use_raymond_lighting=True)
 
 For a full list of the many options that the :class:`.Viewer` supports, check out its
 documentation.
@@ -29,7 +29,7 @@ separate thread so that you can update the scene while the viewer is running.
 To do this, first pop the viewer in a separate thread by calling its constructor
 with the ``run_in_thread`` option set:
 
->>> v = pyrender.Viewer(scene, run_in_thread=True)
+>>> v = pyribbit.Viewer(scene, run_in_thread=True)
 
 Then, you can manipulate the :class:`.Scene` while the viewer is running to
 animate things. However, be careful to acquire the viewer's

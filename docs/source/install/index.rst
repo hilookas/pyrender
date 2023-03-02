@@ -8,7 +8,7 @@ This package is available via ``pip``.
 
 .. code-block:: bash
 
-   pip install pyrender
+   pip install pyribbit
 
 If you're on MacOS, you'll need
 to pre-install my fork of ``pyglet``, as the version on PyPI hasn't yet included
@@ -22,7 +22,7 @@ my change that enables OpenGL contexts on MacOS.
 
 .. _osmesa:
 
-Getting Pyrender Working with OSMesa
+Getting Pyribbit Working with OSMesa
 ------------------------------------
 If you want to render scenes offscreen but don't want to have to
 install a display manager or deal with the pains of trying to get
@@ -36,7 +36,7 @@ getting EGL to work with your hardware, you can try using OSMesa,
 a software-based offscreen renderer that is included with any Mesa
 install.
 
-If you want to use OSMesa with pyrender, you'll have to perform two additional
+If you want to use OSMesa with pyribbit, you'll have to perform two additional
 installation steps:
 
 - :ref:`installmesa`
@@ -148,13 +148,13 @@ on PyPI.
 Building Documentation
 ----------------------
 
-The online documentation for ``pyrender`` is automatically built by Read The Docs.
-Building ``pyrender``'s documentation locally requires a few extra dependencies --
+The online documentation for ``pyribbit`` is automatically built by Read The Docs.
+Building ``pyribbit``'s documentation locally requires a few extra dependencies --
 specifically, `sphinx`_ and a few plugins.
 
 .. _sphinx: http://www.sphinx-doc.org/en/master/
 
-To install the dependencies required, simply change directories into the `pyrender` source and run
+To install the dependencies required, simply change directories into the `pyribbit` source and run
 
 .. code-block:: bash
 

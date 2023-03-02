@@ -14,7 +14,7 @@ Adding Objects
 To create a :class:`.Scene`, simply call the constructor. You can optionally
 specify an ambient light color and a background color:
 
->>> scene = pyrender.Scene(ambient_light=[0.02, 0.02, 0.02],
+>>> scene = pyribbit.Scene(ambient_light=[0.02, 0.02, 0.02],
 ...                        bg_color=[1.0, 1.0, 1.0])
 
 You can add objects to a scene by first creating a :class:`.Node` object
@@ -24,12 +24,12 @@ as 4x4 homogenous transformation matrices that are stored in the node's
 constructor requires you to specify whether you're adding a mesh, light,
 or camera.
 
->>> mesh = pyrender.Mesh.from_trimesh(tm)
->>> light = pyrender.PointLight(color=[1.0, 1.0, 1.0], intensity=2.0)
->>> cam = pyrender.PerspectiveCamera(yfov=np.pi / 3.0, aspectRatio=1.414)
->>> nm = pyrender.Node(mesh=mesh, matrix=np.eye(4))
->>> nl = pyrender.Node(light=light, matrix=np.eye(4))
->>> nc = pyrender.Node(camera=cam, matrix=np.eye(4))
+>>> mesh = pyribbit.Mesh.from_trimesh(tm)
+>>> light = pyribbit.PointLight(color=[1.0, 1.0, 1.0], intensity=2.0)
+>>> cam = pyribbit.PerspectiveCamera(yfov=np.pi / 3.0, aspectRatio=1.414)
+>>> nm = pyribbit.Node(mesh=mesh, matrix=np.eye(4))
+>>> nl = pyribbit.Node(light=light, matrix=np.eye(4))
+>>> nc = pyribbit.Node(camera=cam, matrix=np.eye(4))
 >>> scene.add_node(nm)
 >>> scene.add_node(nl)
 >>> scene.add_node(nc)

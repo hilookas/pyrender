@@ -1,41 +1,41 @@
-# Pyrender
+# Pyribbit
 
-[![Build Status](https://travis-ci.org/mmatl/pyrender.svg?branch=master)](https://travis-ci.org/mmatl/pyrender)
-[![Documentation Status](https://readthedocs.org/projects/pyrender/badge/?version=latest)](https://pyrender.readthedocs.io/en/latest/?badge=latest)
-[![Coverage Status](https://coveralls.io/repos/github/mmatl/pyrender/badge.svg?branch=master)](https://coveralls.io/github/mmatl/pyrender?branch=master)
-[![PyPI version](https://badge.fury.io/py/pyrender.svg)](https://badge.fury.io/py/pyrender)
-[![Downloads](https://pepy.tech/badge/pyrender)](https://pepy.tech/project/pyrender)
+[![Build Status](https://travis-ci.org/mmatl/pyribbit.svg?branch=master)](https://travis-ci.org/mmatl/pyribbit)
+[![Documentation Status](https://readthedocs.org/projects/pyribbit/badge/?version=latest)](https://pyribbit.readthedocs.io/en/latest/?badge=latest)
+[![Coverage Status](https://coveralls.io/repos/github/mmatl/pyribbit/badge.svg?branch=master)](https://coveralls.io/github/mmatl/pyribbit?branch=master)
+[![PyPI version](https://badge.fury.io/py/pyribbit.svg)](https://badge.fury.io/py/pyribbit)
+[![Downloads](https://pepy.tech/badge/pyribbit)](https://pepy.tech/project/pyribbit)
 
-Pyrender is a pure Python (2.7, 3.4, 3.5, 3.6) library for physically-based
+Pyribbit is a pure Python (2.7, 3.4, 3.5, 3.6) library for physically-based
 rendering and visualization.
 It is designed to meet the [glTF 2.0 specification from Khronos](https://www.khronos.org/gltf/).
 
-Pyrender is lightweight, easy to install, and simple to use.
+Pyribbit is lightweight, easy to install, and simple to use.
 It comes packaged with both an intuitive scene viewer and a headache-free
 offscreen renderer with support for GPU-accelerated rendering on headless
 servers, which makes it perfect for machine learning applications.
 
-Extensive documentation, including a quickstart guide, is provided [here](https://pyrender.readthedocs.io/en/latest/).
+Extensive documentation, including a quickstart guide, is provided [here](https://pyribbit.readthedocs.io/en/latest/).
 
 For a minimal working example of GPU-accelerated offscreen rendering using EGL,
 check out the [EGL Google CoLab Notebook](https://colab.research.google.com/drive/1pcndwqeY8vker3bLKQNJKr3B-7-SYenE?usp=sharing).
 
 
 <p align="center">
-  <img width="48%" src="https://github.com/mmatl/pyrender/blob/master/docs/source/_static/rotation.gif?raw=true" alt="GIF of Viewer"/>
-  <img width="48%" src="https://github.com/mmatl/pyrender/blob/master/docs/source/_static/damaged_helmet.png?raw=true" alt="Damaged Helmet"/>
+  <img width="48%" src="https://github.com/mmatl/pyribbit/blob/master/docs/source/_static/rotation.gif?raw=true" alt="GIF of Viewer"/>
+  <img width="48%" src="https://github.com/mmatl/pyribbit/blob/master/docs/source/_static/damaged_helmet.png?raw=true" alt="Damaged Helmet"/>
 </p>
 
 ## Installation
-You can install pyrender directly from pip.
+You can install pyribbit directly from pip.
 
 ```bash
-pip install pyrender
+pip install pyribbit
 ```
 
 ## Features
 
-Despite being lightweight, pyrender has lots of features, including:
+Despite being lightweight, pyribbit has lots of features, including:
 
 * Simple interoperation with the amazing [trimesh](https://github.com/mikedh/trimesh) project,
 which enables out-of-the-box support for dozens of mesh types, including OBJ,
@@ -52,7 +52,7 @@ types of texture and normal mapping.
 ## Sample Usage
 
 For sample usage, check out the [quickstart
-guide](https://pyrender.readthedocs.io/en/latest/examples/index.html) or one of
+guide](https://pyribbit.readthedocs.io/en/latest/examples/index.html) or one of
 the Google CoLab Notebooks:
 
 * [EGL Google CoLab Notebook](https://colab.research.google.com/drive/1pcndwqeY8vker3bLKQNJKr3B-7-SYenE?usp=sharing)
